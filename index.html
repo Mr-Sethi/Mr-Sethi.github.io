@@ -4,31 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
-    <title>Desigon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Council Of Concerned Citizen</title>
 </head>
 <body>
-    <header>
-        <div class="logo">DESIGON</div>
-    </header>
+    
+    <!--                HEADER                   -->
 
-    <nav>
-        <input type="checkbox" id="nav" class="hidden"/>
-        <label for="nav" class="nav-btn">
-            <i></i><i></i><i></i>
-        </label>
-        <div class="nav-wrapper">
-            <ul>
-                <li class="active"><a href="">Home</a></li>
-                <li><a href="">Ui/Ux</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Downloads</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <div class="line"></div>
-            </ul>
-            
+        <header>
+            <div class="logo">
+                Council Of Concerned Citizen
+            </div>
+
+            <nav>
+                <input type="checkbox" id="nav" class="hidden"/>
+                <label for="nav" class="nav-btn">
+                    <i></i><i></i><i></i>
+                </label>
+                <div class="nav-wrapper">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+    <!--            END OF HEADER                -->
+
+    <!--            HERO SECTION             -->
+    
+        <!-- <img src="images/header-overlay.svg" alt="" id="green-overlay"> -->
+        <slider id="slider">
+            <slide><p></p></slide>
+            <slide><p></p></slide>
+            <slide><p></p></slide>
+            <slide><p></p></slide>
+        </slider>
+
+    <!--            END OF HERO              -->
+
+    <div class="about" id="about">
+        <div id="about-head">
+            About Us
         </div>
-    </nav>
+        <div class="container-about">
+            <div>
+                <img src="images/about-us.png" alt="" width="100%">
+            </div>
+            <div>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <br><br><a href="#" class="more">Read More...</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="events" id="events">
+        <div id="event-head">
+            Events
+        </div>
+        <div class="container-events">
+            <div class="container-scroll">
+                <div class="evt">
+                
+                </div>
+                <div class="evt">
+            
+                </div>
+                <div class="evt">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
