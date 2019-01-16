@@ -51,11 +51,39 @@ nav {
   
   nav ul li {
     display: inline-block;
+    position: relative;
+    line-height: 64px;
+  }
+
+  nav ul li ul{
+    position: absolute;
+    left: 0;
+    display: none;
+    z-index: 9999;
+    top:67px;
+    background-color: #2a7e43;
+    padding: 0;
+  }
+
+  nav ul li:hover ul{
+    display: block;
+  }
+
+  nav ul li ul li{
+    display: block;
+    width: 200px;
+    line-height: 40px;
+    transition: 0.15s all ease-in-out;
+    z-index: 999999;
+  }
+
+  nav ul li ul li a{
+    padding-top: 0px;
   }
   
-  nav ul li:not(:first-child) {
+  /* nav ul li:not(:first-child) {
     margin-left: -4px;
-  }
+  } */
   
   nav ul li a {
     display: inline-block;
@@ -63,16 +91,18 @@ nav {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.7);
     padding: 0 20px;
-    margin-top: 5px;
+    padding-top: 5px;
   }
   
   nav ul li[class=active] a {
+    background-color: #236537;
     color: white;
   }
   
-  nav ul li:hover a {
+  nav ul li:hover{
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    background-color: #236537;
     color: white;
   }
   
@@ -136,7 +166,7 @@ nav {
 
     }
     slider{
-        display: block;
+        display: grid;
         width: 100%;
         height: calc( 100vh - 65px);
         background-color: #1f1f1f;
@@ -345,6 +375,116 @@ nav {
 
 /*          END OF EVENTS           */
 
+
+
+
+/* ==============================================         CONTACT US PAGE       ============================== */
+
+  .map iframe{
+    width: 100%;
+    height: 450px;
+    z-index: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .map .form{
+    width: 700px;
+    height: 400px;
+    background-color: #2a7e43;
+    border-radius: 5px;
+    position: relative;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .map .form div:first-child{
+    background-color: white;
+  }
+
+  .map .form div:last-child div{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: transparent;
+    top:50%;
+  }
+
+  .form input[type=text]{
+    width: 80%;
+    line-height: 35px;
+    background: transparent;
+    border:none;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    transition: 0.2s all ease-in-out;
+  }
+
+  .form input[type=text]::placeholder,.form textarea::placeholder{
+    color:rgba(255, 255, 255, 0.5);
+  }
+
+  .form textarea{
+    width: 80%;
+    background: transparent;
+    border:none;
+    border: 1px solid white;
+    border-radius: 5px;
+    color:white;
+    padding-left: 10px;
+    transition: 0.2s all ease-in-out;
+  }
+
+  .form input[type=submit]{
+    width: 80%;
+    line-height: 35px;
+    color: white;
+    background: transparent;
+    border:none;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out all;
+  }
+  .form input[type=submit]:hover{
+    background-color: #359552;
+  }
+
+  .thankyou_message{
+    text-align: center;
+    margin-top: 65px;
+  }
+  .form img{
+    width: 80px;
+  }
+  .snd-msg{
+    color:white;
+    font-size: 13px;
+    margin-top:10px;
+    font-weight: lighter;
+  }
+
+  .thx-msg{
+    color:white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+
+
+
+/* =========================================================================================================== */
 /* ======================================================================================================== */
 
 /*                      RESPONSIVE                       */
@@ -462,6 +602,21 @@ nav {
     .container-about div:last-child{
         width: 100%;
     }
+
+    nav ul li ul{
+      background-color: white;
+      position: relative;
+    }
+
+    nav ul li[class=active] a {
+      background-color: white;
+      color: black;
+    }
+
+    nav ul li:hover{
+      background-color: white;
+    }
+
     
 }
 @media screen and (max-width: 850px){
